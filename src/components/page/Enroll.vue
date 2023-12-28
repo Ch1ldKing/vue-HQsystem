@@ -45,8 +45,8 @@
                         <el-col :span="12">
 
                             <el-form-item label="报名课程">
-                                <el-select v-model="form.skillLevel" placeholder="请选择">
-                                    <el-option v-for="level in skillLevels" :key="level.value" :label="level.label" :value="level.value"></el-option>
+                                <el-select v-model="form.course" placeholder="请选择">
+                                    <el-option v-for="level in courses" :key="level.value" :label="level.label" :value="level.value"></el-option>
                                 </el-select>
                             </el-form-item>
                         </el-col>
@@ -78,9 +78,17 @@ export default {
                 { value: 'senior', label: '高级' },
                 { value: 'expert', label: '专家' }
             ],
+            courses: [
+                { value: 'Vue', label: 'Vue.js' },
+                { value: 'JavaEE', label: 'JavaEE' },
+                { value: 'React', label: 'React.js' },
+                { value: 'Go', label: 'Go' },
+                { value: 'MySQL', label: 'MySQL' }
+            ],
             form: {
                 // ... 其他表单字段 ...
                 skillLevel: '',
+                course: ''
                 // ... 其他表单字段 ...
             }
     }
